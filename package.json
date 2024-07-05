@@ -14,9 +14,11 @@
     "@mui/icons-material": "next",
     "@mui/material": "next",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-router-dom": "^6.24.1"
   },
   "devDependencies": {
+    "@types/node": "^20.14.9",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "@vitejs/plugin-react": "latest",

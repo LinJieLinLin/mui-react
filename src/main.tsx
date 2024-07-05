@@ -1,15 +1,29 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom/client';
-import { ThemeProvider } from '@emotion/react';
-import { CssBaseline } from '@mui/material';
-import theme from './theme';
-import App from './App';
+import { createRoot } from 'react-dom/client'
+import { Suspense, StrictMode } from 'react'
+import { RouterProvider } from 'react-router-dom'
+// import { HashRouter, useRoutes } from 'react-router-dom'
+import router from './router/index'
+// import { routes } from './router/index'
+import { ThemeProvider } from '@emotion/react'
+import { CssBaseline } from '@mui/material'
+import theme from './theme'
+import App from './App'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+// const AppRoutes = () => {
+//   return useRoutes(routes)
+// }
+const app = createRoot(document.getElementById('root')!)
+app.render(
+  <StrictMode>
     <ThemeProvider theme={theme}>
+      <Suspense fallback={<div></div>}>
+        <RouterProvider router={router} />
+        {/* <HashRouter>
+          <AppRoutes />
+        </HashRouter> */}
+      </Suspense>
       <CssBaseline />
       <App />
     </ThemeProvider>
-  </React.StrictMode>,
-);
+  </StrictMode>
+)
