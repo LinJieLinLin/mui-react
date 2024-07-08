@@ -15,7 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     },
     "jsx": "react-jsx"
   },

@@ -7,7 +7,6 @@ import router from './router/index'
 import { ThemeProvider } from '@emotion/react'
 import { CssBaseline } from '@mui/material'
 import theme from './theme'
-import App from './App'
 
 // const AppRoutes = () => {
 //   return useRoutes(routes)
@@ -23,7 +22,6 @@ app.render(
         </HashRouter> */}
       </Suspense>
       <CssBaseline />
-      <App />
     </ThemeProvider>
   </StrictMode>
 )
