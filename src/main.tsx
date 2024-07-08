@@ -7,6 +7,9 @@ import router from './router/index'
 import { ThemeProvider } from '@emotion/react'
 import { CssBaseline } from '@mui/material'
 import theme from './theme'
+import App from './App'
+import store from './store'
+import { Provider } from 'react-redux'
 
 // const AppRoutes = () => {
 //   return useRoutes(routes)
@@ -16,7 +19,9 @@ app.render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <Suspense fallback={<div></div>}>
-        <RouterProvider router={router} />
+        <Provider store={store}>
+          <RouterProvider router={router} />
+        </Provider>
         {/* <HashRouter>
           <AppRoutes />
         </HashRouter> */}
